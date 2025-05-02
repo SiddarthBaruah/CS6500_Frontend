@@ -1,0 +1,31 @@
+cookie:
+  expiry_days: 30
+  key: random_signature_key
+  name: random_cookie_name
+credentials:
+  usernames:
+    angel:
+      email: ee22b081@smail.iitm.ac.in
+      first_name: Angelina
+      last_name: Mech
+      logged_in: false
+      password: $2b$12$Zh/WEYi0d681YJmAOAVvzOYT7effx691VprKgkfSEdGa1fapqmzRa
+      password_hint: tumimurgul
+      roles: null
+    lople:
+      email: dnas@ndlk.com
+      first_name: heo
+      last_name: abdkjs
+      logged_in: false
+      password: $2b$12$0RnmtY.cGH2txXbicYex9eFZ2bFiY8y07x2sBNbmLncOUyvnT07Iu
+      password_hint: l
+      roles: null
+    sid:
+      email: ee21b128@smail.iitm.ac.in
+      failed_login_attempts: 0
+      logged_in: false
+      name: Siddarth
+      password: $2b$12$APLTeXJnRusDPYJk37U0H.6YgOAA0zEfv0Dh8lV3HPPbh7QjoK2Eq
+preauthorized:
+  emails:
+  - melsby@gmail.com

@@ -5,11 +5,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-def register_certificate(user_name,cert):
+def register_certificate(user_name:str,cert:str):
     url = f"{os.getenv('API_BASE_URL')}/certificates"
     headers = {
         "Content-Type": "application/json",
     }
+
     data = {
         "user": user_name,
         "certBytes": cert
@@ -19,3 +20,4 @@ def register_certificate(user_name,cert):
 
     print("Status Code:", response.status_code)
     print("Response Body:", response.text)
+    return response.text
