@@ -2,10 +2,12 @@ import streamlit as st
 import streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
+from utilities.digital_certificates.get_all_users import get_all_users
 
 def initialize_session_state():
-
-
+    if "wide_set" not in st.session_state:
+        st.session_state["wide_set"]=None
+        # st.set_page_config(layout="wide")
     #session states
     if "authentication_status" not in st.session_state:
         st.session_state["authentication_status"] = None
@@ -24,6 +26,9 @@ def initialize_session_state():
         )
     if "prev" not in st.session_state:
         st.session_state["prev"]= None
+
+    if "all_users" not in st.session_state:
+        st.session_state["all_users"]= get_all_users()
 
 
 

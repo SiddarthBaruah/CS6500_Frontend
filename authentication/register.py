@@ -3,6 +3,7 @@ import streamlit as st
 from pages.base_class.page import GeneralPage
 from utilities.digital_certificates.generate_certificate import generate_and_register_certificate
 from streamlit_authenticator.views.authentication_view import Authenticate
+from utilities.digital_certificates.get_all_users import get_all_users
 import yaml
 
 class RegisterUserPage(GeneralPage):
@@ -18,5 +19,6 @@ class RegisterUserPage(GeneralPage):
                 st.write(transactionHash)
                 with open('config.yaml', 'w', encoding='utf-8') as file:
                     yaml.dump(st.session_state['config'], file, default_flow_style=False)
+                st.session_state["all_users"]= get_all_users()
         except Exception as e:
             st.error(e)

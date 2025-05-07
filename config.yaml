@@ -4,28 +4,35 @@ cookie:
   name: random_cookie_name
 credentials:
   usernames:
-    angel:
-      email: ee22b081@smail.iitm.ac.in
-      first_name: Angelina
-      last_name: Mech
+    shivam:
+      email: shivam@dhnss.com
+      first_name: Shivam
+      last_name: hel
       logged_in: false
-      password: $2b$12$Zh/WEYi0d681YJmAOAVvzOYT7effx691VprKgkfSEdGa1fapqmzRa
-      password_hint: tumimurgul
+      password: $2b$12$bJo689kqRQAgOHsZkMt2/.cLg0bovSa.m.GGurjKVNFlplhywXly2
       roles: null
-    lople:
-      email: dnas@ndlk.com
-      first_name: heo
-      last_name: abdkjs
+    shivansh:
+      email: shivansh@gmail.com
+      first_name: Dr
+      last_name: Shivansh
       logged_in: false
-      password: $2b$12$0RnmtY.cGH2txXbicYex9eFZ2bFiY8y07x2sBNbmLncOUyvnT07Iu
-      password_hint: l
+      password: $2b$12$0hXjzWF5XYrcRRyjDb1T3.cZLPtRsD11RP.7aaewQMcFSH3YIIljO
       roles: null
-    sid:
-      email: ee21b128@smail.iitm.ac.in
-      failed_login_attempts: 0
+    sidd:
+      email: siddarth@gmail.com
+      first_name: Dr
+      last_name: Siddarth
       logged_in: false
-      name: Siddarth
-      password: $2b$12$APLTeXJnRusDPYJk37U0H.6YgOAA0zEfv0Dh8lV3HPPbh7QjoK2Eq
+      password: $2b$12$QZFn4OGkzxFY.D8aT4EPGeDgSFGobHLqBtye9Yzu5dswE/8I.OKvO
+      password_hint: Shivansh@123
+      roles: null
+    siddarth:
+      email: siddarth123@gmail.com
+      first_name: Siddarth
+      last_name: Baruah
+      logged_in: false
+      password: $2b$12$DlVLjn7b192CTKiw2AA88.43Q6D.a4w.Bs/q0rNZZaUhC2/Ju448C
+      roles: null
 preauthorized:
   emails:
   - melsby@gmail.com

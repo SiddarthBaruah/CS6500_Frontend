@@ -3,21 +3,22 @@ from authentication.log_out import LogoutPage
 from authentication.login import LoginPage
 from authentication.register import RegisterUserPage
 from pages.home_page import HomePage
+from pages.chat_page import ChatPage
 from streamlit_option_menu import option_menu
 
 def start_app(current_page: st._DeltaGenerator):
     with st.sidebar:
         if st.session_state["authentication_status"]:
+            all_users= [user for user in st.session_state["all_users"] if user!=st.session_state["username"]]
+            menu_title= f'Hi {st.session_state["username"]}'
             page_selected =option_menu(
-                "Subpages",                              # menu title
+                menu_title,                              # menu title
                 [
-                    "HomePage",
-                    "LogOut"
-                ],
+                    "HomePage"
+                ]+ all_users+["LogOut"],
                 icons=[                                # pick any from Bootstrap Icons
                     "house",
-                    "Logout"
-                ],
+                ] +['person']*(len(all_users))+["box-arrow-left"],
                 menu_icon="list",                      # the title icon
                 default_index=0,
                 orientation="vertical",
@@ -84,6 +85,11 @@ def start_app(current_page: st._DeltaGenerator):
         register = RegisterUserPage(name="Register")
         with current_page.container():
             register.render()
+    elif page_selected in st.session_state["all_users"]:
+        chatpage= ChatPage(name=page_selected, reciever_name=page_selected)
+        with current_page.container():
+            chatpage.render()
+    
 
 
 

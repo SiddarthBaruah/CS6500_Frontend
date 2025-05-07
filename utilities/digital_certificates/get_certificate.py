@@ -8,7 +8,7 @@ import json
 load_dotenv()
 
 
-def get_certificate(username):
+def get_certificate(username:str):
     url = f"{os.getenv('API_BASE_URL')}/certificates/{username}"
     headers = {
         "Content-Type": "application/json",
